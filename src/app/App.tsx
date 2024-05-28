@@ -1,20 +1,14 @@
+import { initDataEv } from '@/shared/store/store';
+import { useUnit } from 'effector-react';
 import { useEffect } from 'react';
-import { firebaseApi } from './shared/api';
 
 export const App = () => {
+  const initData = useUnit(initDataEv);
   useEffect(() => {
-    firebaseApi.getBuildingsInfo().then(data => {
-      let docs = data.docs.map(x => ({
-        id: x.id,
-        data: x.data(),
-        parts:  x.data().parts && x.data().parts.map(part => part.id)
-      }));
-      console.log(docs);
-    })
+    initData();
   }, []);
   return (
     <div>
-
     </div>
   );
 };
