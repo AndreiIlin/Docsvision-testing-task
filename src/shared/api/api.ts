@@ -38,7 +38,7 @@ class FirebaseApi {
     return updateDoc(doc(collection(this._db, 'inventory'), id), {
       name: newName,
       count: newCount,
-      place: newPlaceId
+      place: doc(collection(this._db, 'places'), newPlaceId),
     });
   }
 }
