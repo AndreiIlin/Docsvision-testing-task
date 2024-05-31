@@ -20,6 +20,3 @@ sample({
   fn: transformEquipmentById,
   target: $equipmentsByIdStore
 });
-
-$equipmentsStore.watch((state) => console.log(state, '@equipment'));
-$equipmentsByIdStore.watch((state) => console.log(state, '@equipment by id'));

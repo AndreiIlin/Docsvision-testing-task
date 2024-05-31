@@ -18,5 +18,3 @@ sample({
   fn: (buildings) => buildings.filter((building) => !building.parts.length),
   target: $roomsStore
 });
-
-$buildingsStore.watch((state) => console.log(state, '@buildings'));

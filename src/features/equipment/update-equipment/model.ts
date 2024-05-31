@@ -181,5 +181,3 @@ sample({
   clock: updateEquipmentFx.done,
   target: fetchEquipmentFx
 });
-
-updateEquipmentFx.watch((payload) => console.log(payload, '@Update payload'));

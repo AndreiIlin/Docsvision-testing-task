@@ -42,5 +42,3 @@ sample({
   fn: ({ buildingsData, equipmentsData }) => transformToHierarchy(buildingsData, equipmentsData),
   target: $buildingsWithHierarchyStore
 });
-
-$buildingsWithHierarchyStore.watch((state) => console.log(state, '@hier state'));

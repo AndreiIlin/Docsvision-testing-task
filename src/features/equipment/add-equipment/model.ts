@@ -83,7 +83,6 @@ sample({
   target: $addFormTitleError
 });
 
-$addFormTitleError.watch((state) => console.log('$addFormTitleError:', state));
 
 sample({
   clock: addFormSubmittedEv,
