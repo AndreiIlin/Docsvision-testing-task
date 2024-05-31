@@ -16,5 +16,6 @@ export default defineConfig({
         additionalData: `@import 'src/app/styles/variables.scss';`
       }
     }
-  }
+  },
+  base: '/Docsvision-testing-task/',
 });
