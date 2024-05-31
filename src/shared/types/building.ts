@@ -5,10 +5,11 @@ export interface Building {
   parts: string[];
   data?: {
     name: string;
-    parts: DocumentReference[]
+    parts: DocumentReference[];
   };
 }
 
 export interface BuildingWithHierarchy extends Omit<Building, 'parts'> {
-  parts: BuildingWithHierarchy[]
+  parts: BuildingWithHierarchy[];
+  isEmpty: boolean;
 }

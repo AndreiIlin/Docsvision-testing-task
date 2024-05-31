@@ -1,0 +1,52 @@
+.container {
+  border: 1px solid $color-main;
+  border-radius: 5px;
+  width: 100%;
+  max-width: 500px;
+}
+
+.title {
+  font-weight: $fw-semiBold;
+  line-height: 1.4em;
+}
+
+.head {
+  padding: 10px 14px;
+  border-bottom: 1px solid $color-main;
+  display: flex;
+  justify-content: space-between;
+  align-items: start;
+}
+
+.body {
+  padding: 14px;
+}
+
+.link {
+  color: currentColor;
+}
+
+.list {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  row-gap: 12px;
+}
+
+.item {
+  display: flex;
+  justify-content: space-between;
+  column-gap: 20px;
+
+  &-info {
+    display: flex;
+    align-items: center;
+    column-gap: 10px;
+  }
+
+  &-actions {
+    display: flex;
+    align-items: center;
+    column-gap: 20px;
+  }
+}

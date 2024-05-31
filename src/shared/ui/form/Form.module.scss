@@ -1,0 +1,30 @@
+.form {
+  padding: 15px;
+
+  &-fields {
+    margin-bottom: 32px;
+    display: flex;
+    flex-direction: column;
+    row-gap: 15px;
+
+    &:empty {
+      display: none;
+    }
+  }
+}
+
+.title {
+  margin-bottom: 32px;
+  font-size: 24px;
+  font-weight: $fw-regular;
+  color: $color-dark;
+  text-align: center;
+}
+
+.actions {
+  display: flex;
+  flex-wrap: nowrap;
+  justify-content: center;
+  align-items: center;
+  column-gap: 20px;
+}

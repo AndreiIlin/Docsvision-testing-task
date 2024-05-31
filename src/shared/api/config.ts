@@ -6,7 +6,7 @@ type ApiConfig = {
   storageBucket: string;
   messagingSenderId: string;
   appId: string;
-}
+};
 
 export const apiConfig: ApiConfig = {
   apiKey: import.meta.env.VITE_API_KEY,
@@ -15,5 +15,5 @@ export const apiConfig: ApiConfig = {
   databaseURL: import.meta.env.VITE_DATABASE_URL,
   messagingSenderId: import.meta.env.VITE_MESSAGING_SENDER_ID,
   projectId: import.meta.env.VITE_PROJECT_ID,
-  storageBucket: import.meta.env.VITE_STORAGE_BUCKET,
+  storageBucket: import.meta.env.VITE_STORAGE_BUCKET
 };

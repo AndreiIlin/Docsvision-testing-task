@@ -1,14 +1,5 @@
-import { initDataEv } from '@/shared/store/store';
-import { useUnit } from 'effector-react';
-import { useEffect } from 'react';
+import { Router } from '@/pages';
 
-export const App = () => {
-  const initData = useUnit(initDataEv);
-  useEffect(() => {
-    initData();
-  }, []);
-  return (
-    <div>
-    </div>
-  );
-};
+import './styles/index.scss';
+
+export const App = () => <Router />;

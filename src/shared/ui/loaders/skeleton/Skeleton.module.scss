@@ -1,0 +1,14 @@
+.loader {
+  width: 100%;
+  height: 100%;
+  animation: loading 1s linear infinite alternate;
+}
+
+@keyframes loading {
+  0% {
+    background-color: $color-loader-from;
+  }
+  100% {
+    background-color: $color-loader-to;
+  }
+}

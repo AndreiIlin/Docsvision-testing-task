@@ -1,0 +1,21 @@
+.field {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  row-gap: 8px;
+}
+
+.input {
+  outline: none;
+  padding: 5px 10px;
+  border-radius: 5px;
+  font-family: $font-family;
+  font-size: 16px;
+  line-height: 1.2;
+  border: 1px solid $color-main;
+}
+
+.error {
+  font-size: 12px;
+  color: $color-error;
+}

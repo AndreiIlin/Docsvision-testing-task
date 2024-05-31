@@ -1,0 +1,48 @@
+.button {
+  padding: 5px 10px;
+  transition: 0.3s ease-in-out;
+  border: none;
+  border-radius: 5px;
+  color: $color-white;
+}
+
+.large {
+  padding: 6pxc 12px;
+  font-size: 16px;
+}
+
+.primary {
+  background-color: $color-primary;
+
+  &:hover {
+    background-color: $color-primary-hovered;
+  }
+
+  &:active {
+    background-color: $color-primary-active;
+  }
+}
+
+.success {
+  background-color: $color-success;
+
+  &:hover {
+    background-color: $color-success-hovered;
+  }
+
+  &:active {
+    background-color: $color-success-active;
+  }
+}
+
+.danger {
+  background-color: $color-danger;
+
+  &:hover {
+    background-color: $color-danger-hovered;
+  }
+
+  &:active {
+    background-color: $color-danger-active;
+  }
+}

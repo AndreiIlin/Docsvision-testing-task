@@ -1,0 +1,49 @@
+.list {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  row-gap: 10px;
+
+  &-item {
+    padding: 4px 8px;
+    display: flex;
+    align-items: center;
+    column-gap: 10px;
+    cursor: pointer;
+    transition: 0.3s ease-in;
+
+    &:hover {
+      color: $color-dark;
+    }
+  }
+}
+
+.child {
+  margin-left: 20px;
+}
+
+.indicator {
+  flex: 0 0 auto;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background-color: $color-indicator-gray;
+}
+
+.not-empty {
+  background-color: $color-indicator-green;
+}
+
+.title {
+  font-weight: $fw-regular;
+  color: currentColor;
+}
+
+.link {
+  color: currentColor;
+}
+
+.isActive {
+  font-weight: $fw-semiBold;
+  color: $color-dark;
+}

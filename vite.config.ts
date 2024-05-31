@@ -7,7 +7,14 @@ export default defineConfig({
   plugins: [react()],
   resolve: {
     alias: {
-      '@': path.resolve(__dirname, './src'),
-    },
+      '@': path.resolve(__dirname, './src')
+    }
   },
+  css: {
+    preprocessorOptions: {
+      scss: {
+        additionalData: `@import 'src/app/styles/variables.scss';`
+      }
+    }
+  }
 });

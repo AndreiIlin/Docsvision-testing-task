@@ -1,5 +1,13 @@
 import { initializeApp } from 'firebase/app';
-import { collection, getFirestore, getDocs, setDoc, doc, deleteDoc, updateDoc } from 'firebase/firestore';
+import {
+  collection,
+  getFirestore,
+  getDocs,
+  setDoc,
+  doc,
+  deleteDoc,
+  updateDoc
+} from 'firebase/firestore';
 import { apiConfig } from './config';
 
 class FirebaseApi {
@@ -7,7 +15,7 @@ class FirebaseApi {
   private _db = getFirestore(this._api);
 
   getBuildingsInfo() {
-    return getDocs(collection(this._db, 'places'))
+    return getDocs(collection(this._db, 'places'));
   }
 
   getEquipmentInfo() {
@@ -19,11 +27,11 @@ class FirebaseApi {
       name,
       count,
       place: doc(collection(this._db, 'places'), placeId)
-    })
+    });
   }
 
   deleteEquipment(id: string) {
-    return deleteDoc(doc(collection(this._db, 'inventory'), id))
+    return deleteDoc(doc(collection(this._db, 'inventory'), id));
   }
 
   updateEquipment(id: string, newName: string, newCount: number, newPlaceId: string) {
@@ -31,7 +39,7 @@ class FirebaseApi {
       name: newName,
       count: newCount,
       place: newPlaceId
-    })
+    });
   }
 }
 

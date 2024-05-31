@@ -1,0 +1,32 @@
+.loader {
+  display: flex;
+  flex-direction: column;
+  row-gap: 20px;
+}
+
+.container {
+  border: 1px solid $color-main;
+  border-radius: 5px;
+  width: 100%;
+  max-width: 500px;
+}
+
+.head {
+  padding: 10px 14px;
+  border-bottom: 1px solid $color-main;
+  display: flex;
+  justify-content: space-between;
+  align-items: start;
+}
+
+.body {
+  padding: 14px;
+  display: flex;
+  flex-direction: column;
+  row-gap: 12px;
+}
+
+.item {
+  height: 27px;
+  width: 400px;
+}
