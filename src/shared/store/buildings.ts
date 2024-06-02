@@ -6,6 +6,7 @@ import { createEffect, createStore, sample } from 'effector';
 export const fetchBuildingsFx = createEffect(() => firebaseApi.getBuildingsInfo());
 export const $buildingsStore = createStore<Building[]>([]);
 export const $roomsStore = createStore<Building[]>([]);
+export const $isMenuOpened = createStore(false)
 
 sample({
   clock: fetchBuildingsFx.doneData,

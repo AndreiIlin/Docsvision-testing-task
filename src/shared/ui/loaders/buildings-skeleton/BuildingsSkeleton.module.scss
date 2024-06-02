@@ -5,8 +5,17 @@
 }
 
 .item {
-  height: 19px;
+  height: 15px;
   width: 300px;
+
+  @include laptop-v-view {
+    width: 200px;
+  }
+
+  @include laptop-h-view {
+    height: 19px;
+  }
+
 }
 
 .mt-1 {

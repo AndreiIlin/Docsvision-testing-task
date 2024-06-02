@@ -6,8 +6,13 @@
 }
 
 .title {
+  font-size: 14px;
   font-weight: $fw-semiBold;
   line-height: 1.4em;
+
+  @include laptop-h-view {
+    font-size: 18px;
+  }
 }
 
 .head {
@@ -35,8 +40,14 @@
 
 .item {
   display: flex;
-  justify-content: space-between;
-  column-gap: 20px;
+  flex-direction: column;
+  row-gap: 10px;
+
+  @include laptop-h-view {
+    flex-direction: row;
+    justify-content: space-between;
+    column-gap: 20px;
+  }
 
   &-info {
     display: flex;

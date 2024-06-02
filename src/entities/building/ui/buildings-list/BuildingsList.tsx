@@ -10,9 +10,10 @@ import styles from './BuildingsList.module.scss';
 interface BuildingsListProps {
   buildings: BuildingWithHierarchy[];
   isChild?: boolean;
+  closeMenu: () => void;
 }
 
-export const BuildingsList: FC<BuildingsListProps> = ({ buildings, isChild = false }) => {
+export const BuildingsList: FC<BuildingsListProps> = ({ buildings, closeMenu ,isChild = false }) => {
   const params = useParams();
 
   return (
@@ -23,7 +24,7 @@ export const BuildingsList: FC<BuildingsListProps> = ({ buildings, isChild = fal
     >
       {buildings.map((building) => (
         <React.Fragment key={building.id}>
-          <Link className={styles.link} to={routes.getBuildingRoute(building.id)}>
+          <Link onClick={closeMenu} className={styles.link} to={routes.getBuildingRoute(building.id)}>
             <li className={styles['list-item']}>
               <div
                 className={clsx(styles.indicator, {
@@ -39,7 +40,7 @@ export const BuildingsList: FC<BuildingsListProps> = ({ buildings, isChild = fal
               </h4>
             </li>
           </Link>
-          {!!building.parts.length && <BuildingsList buildings={building.parts} isChild />}
+          {!!building.parts.length && <BuildingsList closeMenu={closeMenu} buildings={building.parts} isChild />}
         </React.Fragment>
       ))}
     </ul>

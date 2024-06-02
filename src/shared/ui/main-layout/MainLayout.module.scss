@@ -1,4 +1,9 @@
 .layout {
-  padding: 40px;
+  padding: 50px 10px 40px;
   width: 100%;
+  position: relative;
+
+  @include laptop-v-view {
+    padding: 40px;
+  }
 }
